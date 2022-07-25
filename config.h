@@ -92,13 +92,15 @@ static const char *termcmd[] = {"st", NULL};
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
-    {MODKEY, XK_d, spawn, {.v = dmenucmd}},
+    {MODKEY, XK_d, spawn, SHCMD("~/.dwm/rofi/launch.sh")},
     {MODKEY | ShiftMask, XK_Return, spawn,
      SHCMD("alacritty --config-file ~/.dwm/alacritty/alacritty.yml")},
     {MODKEY | ShiftMask, XK_f, spawn, SHCMD("firefox")},
     {MODKEY | ShiftMask, XK_p, spawn, SHCMD("dmenu-power-menu")},
     {MODKEY | ShiftMask, XK_d, spawn, SHCMD("nemo")},
     {MODKEY | ShiftMask, XK_s, spawn, SHCMD("flameshot gui")},
+    {MODKEY, XK_a, spawn, SHCMD("~/.dwm/scripts/alacritty_theme.sh")},
+    {MODKEY, XK_r, spawn, SHCMD("~/.dwm/scripts/rofi_theme.sh")},
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},

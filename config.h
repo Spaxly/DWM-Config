@@ -96,7 +96,9 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_Return, spawn,
      SHCMD("alacritty --config-file ~/.dwm/alacritty/alacritty.yml")},
     {MODKEY | ShiftMask, XK_f, spawn, SHCMD("firefox")},
-    {MODKEY | ShiftMask, XK_p, spawn, SHCMD("dmenu-power-menu")},
+    {MODKEY | ShiftMask, XK_p, spawn,
+     SHCMD("rofi -show p -modi p:rofi-power-menu -theme "
+           "~/.dwm/rofi/themes/saga.rasi")},
     {MODKEY | ShiftMask, XK_d, spawn, SHCMD("nemo")},
     {MODKEY | ShiftMask, XK_s, spawn, SHCMD("flameshot gui")},
     {MODKEY, XK_a, spawn, SHCMD("~/.dwm/scripts/alacritty_theme.sh")},
